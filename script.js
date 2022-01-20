@@ -1,3 +1,5 @@
+
+let pokemonRepository = (function () { 
 let pokemonList = [
     {
         name: "Charizard",
@@ -16,25 +18,29 @@ let pokemonList = [
     }
 ];
 
-pokemonList.forEach( (item, i, arr) => console.log(i, item, arr))
+function getAll() {
+    return pokemonList;
+}
 
+function add(pokemon) {
+    pokemonList.push(pokemon);
+}
+
+return {
+    add: add,
+    getAll: getAll
+};
+})();
+
+console.log(pokemonRepository.getAll());
+pokemonRepository.add({name: 'Squitle', height: '0.5', Type: ["water"] });
+
+pokemonRepository.getAll().forEach(function(pokemon){
 
     
+});
 
 
 
 
 
-
-
-// function printArrayDetails(){
-// for (let i = 0; i < pokemonList.length; i++)  {
-//     if  (pokemonList[i].height >1){
-//         document.write(pokemonList[i].name + ', ' + ('height:') + pokemonList[i].height + ' ' + "Wow! Thats a big Pokemon.")
-//     }else if (pokemonList[i].height <1){
-//         document.write(pokemonList[i].name + ', ' + ('height:') + pokemonList[i].height + ' ' + "Thats a small pokemon!")
-//     }
-// }    
-// }
-// printArrayDetails();
-// printArrayDetails();
