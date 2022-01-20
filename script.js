@@ -36,9 +36,8 @@ console.log(pokemonRepository.getAll());
 pokemonRepository.add({name: 'Squitle', height: '0.5', Type: ["water"] });
 
 pokemonRepository.getAll().forEach(function(pokemon){
-
-    
-});
+    console.log(pokemon)
+    });
 
 
 
